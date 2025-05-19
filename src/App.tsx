@@ -21,8 +21,8 @@ enum SortType {
 }
 
 enum HighlightType {
-  highlighted = 'is-light',
-  notHighlighted = '',
+  notHighlighted = 'is-light',
+  highlighted = '',
 }
 
 export const App: React.FC = () => {
@@ -66,7 +66,7 @@ export const App: React.FC = () => {
       <div className="buttons">
         <button
           type="button"
-          className={`button is-info ${activeSort === SortType.Alphabet ? HighlightType.notHighlighted : HighlightType.highlighted}`}
+          className={`button is-info ${activeSort === SortType.Alphabet ? HighlightType.highlighted : HighlightType.notHighlighted}`}
           onClick={sortAlphabetically}
         >
           Sort alphabetically
@@ -74,7 +74,7 @@ export const App: React.FC = () => {
 
         <button
           type="button"
-          className={`button is-success ${activeSort === SortType.Length ? HighlightType.notHighlighted : HighlightType.highlighted}`}
+          className={`button is-success ${activeSort === SortType.Length ? HighlightType.highlighted : HighlightType.notHighlighted}`}
           onClick={sortByLength}
         >
           Sort by length
@@ -82,7 +82,7 @@ export const App: React.FC = () => {
 
         <button
           type="button"
-          className={`button is-warning ${isReversed ? HighlightType.notHighlighted : HighlightType.highlighted}`}
+          className={`button is-warning ${isReversed ? HighlightType.highlighted : HighlightType.notHighlighted}`}
           onClick={reverseList}
         >
           Reverse
